@@ -3,48 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تصريح قسم الهندسة الطبية</title>
+
+<title>تصريح دخول - قسم الهندسة الطبية</title>
 
 <style>
+
 body {
-    font-family: Arial, sans-serif;
-    background: white;
     margin: 0;
-    padding: 40px 20px;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
 }
 
-.box {
-    max-width: 700px;
-    margin: 80px auto;
-    padding: 35px;
-    border: 2px solid #222;
-    border-radius: 15px;
+.page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 750px;
+    padding: 45px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
     font-size: 25px;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 p {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 2;
+    text-align: right;
+    margin-bottom: 30px;
 }
+
+.english {
+    direction: ltr;
+    text-align: left;
+}
+
+ul {
+    font-size: 20px;
+    line-height: 2.2;
+    padding-right: 30px;
+    margin-bottom: 35px;
+}
+
+.english-list {
+    direction: ltr;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+.warning {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 2px solid #222;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 35px;
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.page2 {
+    display: none;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="box">
+<!-- PAGE 1 -->
 
-<h1>تصريح قسم الهندسة الطبية</h1>
+<div class="page" id="page1">
+
+<div class="card">
+
+<h1>تصريح دخول</h1>
+
+<h2>تصريح دخول</h2>
 
 <p>
-يفوض قسم الهندسة الطبية حامل هذه البطاقة بالمرور لكافة الأقسام الطبية بالمستشفى لإجراء عمليات الصيانة الدورية والإصلاح للأجهزة الطبية وذلك داخل وخارج أوقات العمل الرسمية.
+يفوض قسم الهندسة الطبية حامل هذه البطاقة بالمرور لكافة الأقسام الطبية بالمستشفى لإجراء عمليات الصيانة الدورية والإصلاح للأجهزة الطبية، وذلك داخل وخارج أوقات العمل الرسمية.
+</p>
+
+<h2 class="english">Access Permit</h2>
+
+<p class="english">
+The Biomedical Engineering Department authorizes the holder of this card to access all medical departments within the hospital to perform preventive maintenance and repair of medical equipment, both during and outside official working hours.
+</p>
+
+<div style="text-align:center;">
+<button onclick="nextPage()">التالي / Next →</button>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="page page2" id="page2">
+
+<div class="card">
+
+<h1>التعليمات / Instructions</h1>
+
+<h2>التعليمات</h2>
+
+<ul>
+<li>الامتناع عن لبس السكرب نهائيًا.</li>
+<li>إبراز الهوية طوال فترة الزيارة.</li>
+<li>الالتزام بالقوانين واللوائح التنظيمية لمستشفى الفروانية.</li>
+<li>إرجاع الهوية للقسم فور الانتهاء من الأعمال المطلوبة.</li>
+</ul>
+
+<h2 class="english">Instructions</h2>
+
+<ul class="english-list">
+<li>Strictly refrain from wearing scrubs.</li>
+<li>Display the ID throughout the entire visit.</li>
+<li>Comply with the laws, regulations, and policies of Farwaniya Hospital.</li>
+<li>Return the ID to the department immediately upon completion of the required work.</li>
+</ul>
+
+<div class="warning">
+
+<p>
+هذه الهوية مخصصة لمهندسي الصيانة والفنيين فقط ولا يتم استخدامها لغرض التسويق أو المبيعات.
+</p>
+
+<p class="english">
+This ID is intended exclusively for maintenance engineers and technicians and must not be used for marketing or sales purposes.
 </p>
 
 </div>
+
+<div style="text-align:center;">
+<button onclick="previousPage()">← السابق / Previous</button>
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function nextPage() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "flex";
+    window.scrollTo(0, 0);
+}
+
+function previousPage() {
+    document.getElementById("page2").style.display = "none";
+    document.getElementById("page1").style.display = "flex";
+    window.scrollTo(0, 0);
+}
+
+</script>
 
 </body>
 </html>
