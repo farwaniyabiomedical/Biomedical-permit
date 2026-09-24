@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,7 +100,9 @@ button {
 </style>
 </head>
 
+
 <body>
+
 
 <!-- PAGE 1 -->
 
@@ -107,15 +110,11 @@ button {
 
 <div class="card">
 
-<h1>تصريح دخول</h1>
-
-<h2>تصريح دخول</h2>
+<h1>تصريح دخول / Access Permit</h1>
 
 <p>
 يفوض قسم الهندسة الطبية حامل هذه البطاقة بالمرور لكافة الأقسام الطبية بالمستشفى لإجراء عمليات الصيانة الدورية والإصلاح للأجهزة الطبية، وذلك داخل وخارج أوقات العمل الرسمية.
 </p>
-
-<h2 class="english">Access Permit</h2>
 
 <p class="english">
 The Biomedical Engineering Department authorizes the holder of this card to access all medical departments within the hospital to perform preventive maintenance and repair of medical equipment, both during and outside official working hours.
@@ -141,20 +140,48 @@ The Biomedical Engineering Department authorizes the holder of this card to acce
 <h2>التعليمات</h2>
 
 <ul>
-<li>الامتناع عن لبس السكرب نهائيًا.</li>
-<li>إبراز الهوية طوال فترة الزيارة.</li>
-<li>الالتزام بالقوانين واللوائح التنظيمية لمستشفى الفروانية.</li>
-<li>إرجاع الهوية للقسم فور الانتهاء من الأعمال المطلوبة.</li>
+
+<li>
+الامتناع عن لبس السكرب نهائيًا.
+</li>
+
+<li>
+إبراز الهوية طوال فترة الزيارة.
+</li>
+
+<li>
+الالتزام بالقوانين واللوائح التنظيمية لمستشفى الفروانية.
+</li>
+
+<li>
+إرجاع الهوية للقسم فور الانتهاء من الأعمال المطلوبة.
+</li>
+
 </ul>
+
 
 <h2 class="english">Instructions</h2>
 
 <ul class="english-list">
-<li>Strictly refrain from wearing scrubs.</li>
-<li>Display the ID throughout the entire visit.</li>
-<li>Comply with the laws, regulations, and policies of Farwaniya Hospital.</li>
-<li>Return the ID to the department immediately upon completion of the required work.</li>
+
+<li>
+Strictly refrain from wearing scrubs.
+</li>
+
+<li>
+Display the ID throughout the entire visit.
+</li>
+
+<li>
+Comply with the laws, regulations, and policies of Farwaniya Hospital.
+</li>
+
+<li>
+Return the ID to the department immediately upon completion of the required work.
+</li>
+
 </ul>
+
 
 <div class="warning">
 
@@ -168,6 +195,7 @@ This ID is intended exclusively for maintenance engineers and technicians and mu
 
 </div>
 
+
 <div style="text-align:center;">
 <button onclick="previousPage()">← السابق / Previous</button>
 </div>
@@ -180,18 +208,28 @@ This ID is intended exclusively for maintenance engineers and technicians and mu
 <script>
 
 function nextPage() {
+
     document.getElementById("page1").style.display = "none";
+
     document.getElementById("page2").style.display = "flex";
+
     window.scrollTo(0, 0);
+
 }
 
+
 function previousPage() {
+
     document.getElementById("page2").style.display = "none";
+
     document.getElementById("page1").style.display = "flex";
+
     window.scrollTo(0, 0);
+
 }
 
 </script>
+
 
 </body>
 </html>
