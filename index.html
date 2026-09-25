@@ -19,27 +19,50 @@ body {
 .page {
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 50px 25px;
+    padding: 30px 20px 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .card {
+    position: relative;
     background: white;
     width: 100%;
     max-width: 750px;
-    padding: 45px;
+    min-height: 90vh;
+    padding: 130px 45px 45px;
     box-sizing: border-box;
     border-radius: 18px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+/* LOGOS */
+
+.logo-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 150px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.logo-right {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 150px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* HEADINGS */
+
 h1 {
     text-align: center;
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 h2 {
@@ -48,6 +71,8 @@ h2 {
     margin-top: 0;
     margin-bottom: 25px;
 }
+
+/* TEXT */
 
 p {
     font-size: 21px;
@@ -60,6 +85,8 @@ p {
     direction: ltr;
     text-align: left;
 }
+
+/* LISTS */
 
 ul {
     font-size: 20px;
@@ -75,12 +102,16 @@ ul {
     padding-right: 0;
 }
 
+/* FINAL WARNING */
+
 .warning {
     margin-top: 40px;
     padding-top: 25px;
     border-top: 2px solid #222;
     font-weight: bold;
 }
+
+/* BUTTON */
 
 button {
     margin-top: 35px;
@@ -97,6 +128,46 @@ button {
     display: none;
 }
 
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 125px 25px 35px;
+    }
+
+    .logo-left,
+    .logo-right {
+        width: 105px;
+        height: 70px;
+        top: 20px;
+    }
+
+    .logo-left {
+        left: 15px;
+    }
+
+    .logo-right {
+        right: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 35px;
+    }
+
+    p {
+        font-size: 19px;
+        line-height: 1.9;
+    }
+
+    ul {
+        font-size: 18px;
+        line-height: 2;
+    }
+
+}
+
 </style>
 </head>
 
@@ -110,15 +181,31 @@ button {
 
 <div class="card">
 
+<img
+    src="76F52D89-B5B9-4AB3-A2BD-C1814BE855FB.png"
+    class="logo-left"
+    alt="Farwaniya Health Region"
+>
+
+<img
+    src="DC98CDD7-1E01-4004-AD06-7D4E9490682B.png"
+    class="logo-right"
+    alt="Farwaniya Hospital"
+>
+
+
 <h1>تصريح دخول / Access Permit</h1>
+
 
 <p>
 يفوض قسم الهندسة الطبية حامل هذه البطاقة بالمرور لكافة الأقسام الطبية بالمستشفى لإجراء عمليات الصيانة الدورية والإصلاح للأجهزة الطبية، وذلك داخل وخارج أوقات العمل الرسمية.
 </p>
 
+
 <p class="english">
 The Biomedical Engineering Department authorizes the holder of this card to access all medical departments within the hospital to perform preventive maintenance and repair of medical equipment, both during and outside official working hours.
 </p>
+
 
 <div style="text-align:center;">
 <button onclick="nextPage()">التالي / Next →</button>
@@ -129,15 +216,28 @@ The Biomedical Engineering Department authorizes the holder of this card to acce
 </div>
 
 
+
 <!-- PAGE 2 -->
 
 <div class="page page2" id="page2">
 
 <div class="card">
 
+<img
+    src="76F52D89-B5B9-4AB3-A2BD-C1814BE855FB.png"
+    class="logo-left"
+    alt="Farwaniya Health Region"
+>
+
+<img
+    src="DC98CDD7-1E01-4004-AD06-7D4E9490682B.png"
+    class="logo-right"
+    alt="Farwaniya Hospital"
+>
+
+
 <h1>التعليمات / Instructions</h1>
 
-<h2>التعليمات</h2>
 
 <ul>
 
@@ -159,8 +259,6 @@ The Biomedical Engineering Department authorizes the holder of this card to acce
 
 </ul>
 
-
-<h2 class="english">Instructions</h2>
 
 <ul class="english-list">
 
@@ -203,6 +301,7 @@ This ID is intended exclusively for maintenance engineers and technicians and mu
 </div>
 
 </div>
+
 
 
 <script>
